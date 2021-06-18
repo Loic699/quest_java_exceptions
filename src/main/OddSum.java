@@ -17,7 +17,13 @@ public class OddSum {
             System.out.println();
         }
         for (int i = 0; i < args.length; i++) {
+        	try {
             listInt.add(Integer.parseInt(args[i]));
+        	}catch(NumberFormatException e) {
+        		
+        	}catch(Exception e) {
+        		
+        	}
         }
 
         res = sum(listInt);
@@ -34,11 +40,17 @@ public class OddSum {
     public static int sum(ArrayList<Integer> listInt) {
 
         int result = 0;
+        
+        
         for (int value : listInt) {
             if (value % 2 != 0) {
                 result += value;
             }
-        }
-        return result;
-    }
+        
+       
+       
+		
+    
 }
+		return result;
+    }}
